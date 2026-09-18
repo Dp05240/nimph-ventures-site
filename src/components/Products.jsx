@@ -7,7 +7,7 @@ const products = [
     name: 'Drafsense',
     description: 'RCC check-drafting SaaS for businesses',
     detail: 'Secure, compliant payment platform with bank-grade encryption and verified merchants. Streamlining business payments with real-time check processing.',
-    status: 'Live · Paying customers',
+    status: 'Live · In production',
     statusColor: 'text-green-400',
     badge: 'Bank-reviewed · Real checks clearing',
     tech: ['FinTech', 'Security', 'Compliance'],
@@ -20,7 +20,7 @@ const products = [
     detail: 'Replacing paper clipboards for residential home builders — connecting the office, the inspector in the field, and the contractor in one workflow.',
     status: 'Beta · Live',
     statusColor: 'text-blue-400',
-    badge: 'Active user interviews underway',
+    badge: 'Seeking first design partner', // Changed from "Active user interviews underway"
     tech: ['Construction Tech', 'Mobile', 'Workflow'],
     url: 'https://app.promarkworks.com/',
     urlLabel: 'Check Out',
@@ -31,7 +31,7 @@ const products = [
     detail: 'Multi-tenant enterprise resource planning system powering distribution operations across the East Coast.',
     status: 'Private · Live',
     statusColor: 'text-purple-400',
-    badge: '7 locations · 1,000+ daily orders · 400+ customer interactions',
+    badge: '<!-- CONFIRM: real current daily order count and customer count -->', // Placeholder until confirmed
     tech: ['ERP', 'B2B', 'Multi-tenant'],
     url: null,
     urlLabel: 'Private Access',

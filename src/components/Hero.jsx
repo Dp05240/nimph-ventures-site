@@ -116,8 +116,9 @@ const Hero = () => {
           className="mb-8 sm:mb-12"
         >
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light text-nimph-text/90 max-w-4xl mx-auto leading-relaxed px-4">
-            A startup studio building category-defining B2B SaaS,{' '}
-            <span className="text-gradient font-medium">one problem at a time</span>
+            Production software for problems I've lived through —{' '}
+            <span className="text-gradient font-medium">architected, AI-directed, and shipped</span>{' '}
+            by one operator who stays in the details.
           </h2>
         </motion.div>
 

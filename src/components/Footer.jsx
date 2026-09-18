@@ -27,10 +27,10 @@ const Footer = () => {
 
             {/* Contact methods */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-              {/* Email 1 */}
+              {/* Hiring/Consulting CTA */}
               <motion.a
                 href="mailto:dhaval@nimphventures.com"
-                onClick={() => trackCTAClick('Email - Nimph Ventures', 'dhaval@nimphventures.com')}
+                onClick={() => trackCTAClick('Email - Hiring/Consulting', 'dhaval@nimphventures.com')}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="group inline-flex items-center gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-nimph-accent text-white rounded-lg font-medium transition-smooth hover:bg-nimph-accent-light hover:shadow-lg hover:shadow-nimph-accent/30 w-full sm:w-auto justify-center"
@@ -48,14 +48,14 @@ const Footer = () => {
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                <span className="hidden sm:inline">dhaval@nimphventures.com</span>
-                <span className="sm:hidden">Nimph Email</span>
+                <span className="hidden sm:inline">Hiring / Consulting</span>
+                <span className="sm:hidden">Hiring / Consulting</span>
               </motion.a>
 
-              {/* Email 2 */}
+              {/* Product/Partnership CTA */}
               <motion.a
                 href="mailto:dhaval@drafsense.com"
-                onClick={() => trackCTAClick('Email - Drafsense', 'dhaval@drafsense.com')}
+                onClick={() => trackCTAClick('Email - Product/Partnership', 'dhaval@drafsense.com')}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="group inline-flex items-center gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-nimph-surface text-nimph-text rounded-lg font-medium border border-nimph-accent/20 transition-smooth hover:border-nimph-accent hover:shadow-lg hover:shadow-nimph-accent/20 w-full sm:w-auto justify-center"
@@ -73,8 +73,8 @@ const Footer = () => {
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                <span className="hidden sm:inline">dhaval@drafsense.com</span>
-                <span className="sm:hidden">Drafsense Email</span>
+                <span className="hidden sm:inline">Product / Partnership</span>
+                <span className="sm:hidden">Product / Partnership</span>
               </motion.a>
             </div>
 

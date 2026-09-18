@@ -17,11 +17,6 @@ const stats = [
     label: 'Locations',
     sublabel: 'Multi-state operations',
   },
-  {
-    value: '1,400+',
-    label: 'Daily Interactions',
-    sublabel: 'Orders & customer touchpoints',
-  },
 ]
 
 const Traction = () => {
@@ -43,8 +38,8 @@ const Traction = () => {
             </h3>
           </div>
 
-          {/* Stats grid */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
+          {/* Stats grid - 3 columns for better layout */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
