@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react'
 import Hero from './components/Hero'
+import About from './components/About'
+import Experience from './components/Experience'
 import Products from './components/Products'
 import Traction from './components/Traction'
-import About from './components/About'
 import Footer from './components/Footer'
 import { initGA, usePageTracking } from './utils/analytics'
 import './index.css'
@@ -22,9 +23,10 @@ function App() {
   return (
     <div className="min-h-screen bg-nimph-dark">
       <Hero />
+      <About />
+      <Experience />
       <Products />
       <Traction />
-      <About />
       <Footer />
     </div>
   )
