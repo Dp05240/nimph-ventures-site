@@ -1,6 +1,23 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
+const bullets = [
+  'U.S. merchant wholesalers had $11.4 trillion in sales in 2022 (Census Bureau, Annual Wholesale Trade Survey).',
+  'Business checks declined 4.0% a year by number from 2018 to 2021, less than half the 9.3% annual decline for consumer checks (Federal Reserve Payments Study).',
+  'Price King\'s ERP has no API, so ordering, stock, and price updates had to be keyed in by hand. Nimph Ventures builds apps and agents around that gap.',
+]
+
+const sources = [
+  {
+    label: 'Census Bureau — Annual Wholesale Trade Survey',
+    url: 'https://www.census.gov/newsroom/press-releases/2024/annual-wholesale-trade-survey.html',
+  },
+  {
+    label: 'Federal Reserve Payments Study',
+    url: 'https://www.federalreserve.gov/paymentsystems/frps-dfips-cy-2021.htm',
+  },
+]
+
 const About = () => {
   return (
     <section className="py-20 sm:py-32 px-4 sm:px-6 lg:px-8 relative">
@@ -10,81 +27,57 @@ const About = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="text-center"
         >
           {/* Section title */}
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 tracking-tight">
-            How I Work
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 sm:mb-12 tracking-tight text-center">
+            Market and Opportunity
           </h2>
 
-          {/* Main body copy */}
-          <div className="space-y-6 text-base sm:text-lg md:text-xl text-nimph-text/80 leading-relaxed text-left">
-            <p>
-              I run technology and operations for a multi-location wholesale distribution business by day, and architect production B2B software by night. Every product here started the same way: a real operational problem I hit myself, not a market I researched from the outside.
-            </p>
+          {/* Bullets */}
+          <ul className="space-y-5 mb-10">
+            {bullets.map((bullet, i) => (
+              <motion.li
+                key={i}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.08, ease: [0.16, 1, 0.3, 1] }}
+                className="flex items-start gap-4"
+              >
+                <span
+                  className="mt-2 w-2 h-2 rounded-full bg-nimph-accent flex-shrink-0"
+                  aria-hidden="true"
+                />
+                <p className="text-base sm:text-lg text-nimph-text/80 leading-relaxed">
+                  {bullet}
+                </p>
+              </motion.li>
+            ))}
+          </ul>
 
-            <p>
-              I don't write every line of code. I design the system — schema, auth model, data flow — then direct the build with Claude and Cursor, and review it the way a fintech team would: adversarial audits before launch, known gaps documented instead of hidden.
-            </p>
-
-            <p className="text-nimph-gray">
-              <span className="text-nimph-text font-medium">If you're evaluating me for a role:</span> this is what hands-on, AI-directed system ownership looks like in production — not on a whiteboard.
-            </p>
-            
-            <p className="text-nimph-gray">
-              <span className="text-nimph-text font-medium">If you're a distributor buried in phone orders and spreadsheets:</span> this is software built by someone who's operated inside your problem, not guessed at it from outside.
-            </p>
-          </div>
-
-          {/* Credibility bullets */}
+          {/* Sources */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-12 sm:mt-16 grid grid-cols-1 gap-6"
+            transition={{ duration: 0.5, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+            className="border-t border-nimph-accent/10 pt-6"
           >
-            <div className="bg-nimph-surface rounded-xl p-6 sm:p-8 border border-nimph-accent/10 text-left">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-2 h-2 rounded-full bg-nimph-accent mt-2"></div>
-                <div>
-                  <h3 className="text-lg sm:text-xl font-semibold mb-2 text-nimph-text">
-                    Architect & direct
-                  </h3>
-                  <p className="text-sm sm:text-base text-nimph-gray">
-                    Own the system design and data model, then direct AI-assisted execution with adversarial review before anything ships
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-nimph-surface rounded-xl p-6 sm:p-8 border border-nimph-accent/10 text-left">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-2 h-2 rounded-full bg-nimph-accent mt-2"></div>
-                <div>
-                  <h3 className="text-lg sm:text-xl font-semibold mb-2 text-nimph-text">
-                    Domain-first
-                  </h3>
-                  <p className="text-sm sm:text-base text-nimph-gray">
-                    Every product traces to a real problem operated inside, never market research
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-nimph-surface rounded-xl p-6 sm:p-8 border border-nimph-accent/10 text-left">
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-2 h-2 rounded-full bg-nimph-accent mt-2"></div>
-                <div>
-                  <h3 className="text-lg sm:text-xl font-semibold mb-2 text-nimph-text">
-                    Security-serious
-                  </h3>
-                  <p className="text-sm sm:text-base text-nimph-gray">
-                    Encrypted at rest, externally audited, gaps documented rather than hidden
-                  </p>
-                </div>
-              </div>
-            </div>
+            <p className="text-xs text-nimph-gray uppercase tracking-wider mb-3 font-medium">Sources</p>
+            <ul className="space-y-2">
+              {sources.map((s) => (
+                <li key={s.url}>
+                  <a
+                    href={s.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-nimph-accent hover:text-nimph-accent-light transition-smooth break-all"
+                  >
+                    {s.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </motion.div>
         </motion.div>
       </div>

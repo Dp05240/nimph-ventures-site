@@ -1,21 +1,29 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import {
+  STAT_DRAFSENSE_CHECKS,
+  STAT_DRAFSENSE_VALUE,
+  STAT_WEBCHAT_CUSTOMERS,
+  STAT_WEBCHAT_REVENUE,
+  STAT_ORDERRUNNER_RUNS,
+  STAT_ORDERRUNNER_TOTAL,
+} from '../constants'
 
 const stats = [
   {
-    value: '5',
-    label: 'Products',
-    sublabel: 'Live & in development',
+    value: STAT_DRAFSENSE_CHECKS,
+    label: 'checks printed',
+    sublabel: `including ${STAT_DRAFSENSE_VALUE} at Price King · Drafsense`,
   },
   {
-    value: '3',
-    label: 'Markets',
-    sublabel: 'FinTech, Construction, Distribution',
+    value: STAT_WEBCHAT_CUSTOMERS,
+    label: 'business customers',
+    sublabel: `${STAT_WEBCHAT_REVENUE} revenue increase · PSM WebCat`,
   },
   {
-    value: '7',
-    label: 'Locations',
-    sublabel: 'Multi-state operations',
+    value: `${STAT_ORDERRUNNER_RUNS}/${STAT_ORDERRUNNER_TOTAL}`,
+    label: 'ERP order runs',
+    sublabel: 'completed automatically · OrderRunner',
   },
 ]
 
@@ -31,14 +39,7 @@ const Traction = () => {
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="bg-nimph-surface rounded-2xl p-8 sm:p-12 border border-nimph-accent/10"
         >
-          {/* Optional header */}
-          <div className="text-center mb-8 sm:mb-12">
-            <h3 className="text-xl sm:text-2xl font-semibold text-nimph-text/70 tracking-tight">
-              Traction
-            </h3>
-          </div>
-
-          {/* Stats grid - 3 columns for better layout */}
+          {/* Stats grid */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
             {stats.map((stat, index) => (
               <motion.div

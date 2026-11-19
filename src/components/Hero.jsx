@@ -1,6 +1,10 @@
 import React, { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 
+const scrollToSection = (id) => {
+  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+}
+
 const Hero = () => {
   const canvasRef = useRef(null)
 
@@ -92,53 +96,67 @@ const Hero = () => {
         ref={canvasRef}
         className="absolute inset-0 w-full h-full"
         style={{ opacity: 0.6 }}
+        aria-hidden="true"
       />
 
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto text-center">
-        {/* Logo */}
+        {/* Wordmark */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-12 sm:mb-16"
+          className="mb-8 sm:mb-10"
+          aria-hidden="true"
         >
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
+          <p className="text-3xl sm:text-4xl font-bold tracking-tight select-none">
             Nimph<span className="text-nimph-accent">.</span>
-          </h1>
+          </p>
         </motion.div>
 
-        {/* Tagline */}
+        {/* Page H1 */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-8 sm:mb-12"
+          transition={{ duration: 0.6, delay: 0.06, ease: [0.16, 1, 0.3, 1] }}
+          className="mb-6 sm:mb-8"
         >
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light text-nimph-text/90 max-w-4xl mx-auto leading-relaxed px-4">
-            Production software for problems I've lived through —{' '}
-            <span className="text-gradient font-medium">architected, AI-directed, and shipped</span>{' '}
-            by one operator who stays in the details.
-          </h2>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
+            Software for wholesale distribution and B2B payments
+          </h1>
         </motion.div>
 
-        {/* Scroll indicator */}
+        {/* Subhead */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.16, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-16 sm:mt-24"
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}
+          className="mb-10 sm:mb-14"
         >
-          <div className="inline-flex flex-col items-center gap-2 text-nimph-gray">
-            <span className="text-xs sm:text-sm uppercase tracking-wider">Explore</span>
-            <motion.div
-              animate={{ y: [0, 8, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-              className="w-5 h-8 rounded-full border-2 border-nimph-gray/30 flex items-start justify-center p-1"
-            >
-              <div className="w-1 h-2 bg-nimph-accent rounded-full" />
-            </motion.div>
-          </div>
+          <p className="text-base sm:text-lg md:text-xl text-nimph-text/80 max-w-3xl mx-auto leading-relaxed px-4">
+            Nimph Ventures builds and runs products inside a real distribution business, so every feature is tested on live operations.
+          </p>
+        </motion.div>
+
+        {/* CTA buttons */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.18, ease: [0.16, 1, 0.3, 1] }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+        >
+          <button
+            onClick={() => scrollToSection('products')}
+            className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-nimph-accent text-white rounded-lg font-medium transition-smooth hover:bg-nimph-accent-light hover:shadow-lg hover:shadow-nimph-accent/30 w-full sm:w-auto"
+          >
+            See the products
+          </button>
+          <button
+            onClick={() => scrollToSection('contact')}
+            className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-nimph-surface text-nimph-text rounded-lg font-medium border border-nimph-accent/20 transition-smooth hover:border-nimph-accent hover:shadow-lg hover:shadow-nimph-accent/20 w-full sm:w-auto"
+          >
+            Talk to the founder
+          </button>
         </motion.div>
       </div>
     </section>
