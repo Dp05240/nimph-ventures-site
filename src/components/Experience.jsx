@@ -4,7 +4,7 @@ import { trackCTAClick } from '../utils/analytics'
 import {
   LINKEDIN_URL,
   LINKEDIN_HANDLE,
-  EMAIL_CONTACT,
+  EMAIL_FOUNDER,
 } from '../constants'
 
 const experiences = [
@@ -171,8 +171,8 @@ const Experience = () => {
 
           {/* Email */}
           <a
-            href={`mailto:${EMAIL_CONTACT}`}
-            onClick={() => trackCTAClick('Email - Experience', EMAIL_CONTACT)}
+            href={`mailto:${EMAIL_FOUNDER}`}
+            onClick={() => trackCTAClick('Email - Experience', EMAIL_FOUNDER)}
             className="inline-flex items-center gap-2 px-5 py-2.5 bg-nimph-accent text-white rounded-lg hover:bg-nimph-accent-light hover:shadow-lg hover:shadow-nimph-accent/30 transition-smooth text-sm font-medium"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">

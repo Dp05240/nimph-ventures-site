@@ -2,9 +2,11 @@
 export const SITE_URL = 'https://nimphventures.com'
 
 // ─── Contact ─────────────────────────────────────────────────────────────────
-export const EMAIL_CONTACT = 'Dp05240@gmail.com'
-export const EMAIL_NIMPH = 'dhaval@nimphventures.com'
+// Footer contact (two options)
 export const EMAIL_DRAFSENSE = 'dhaval@drafsense.com'
+export const EMAIL_PROMARK = 'admin@promarkworks.com'
+// Founder direct contact (Experience section)
+export const EMAIL_FOUNDER = 'dhavalpatel@nimphventures.com'
 
 // ─── Social ──────────────────────────────────────────────────────────────────
 export const LINKEDIN_URL = 'https://linkedin.com/in/dhavalpatel27'

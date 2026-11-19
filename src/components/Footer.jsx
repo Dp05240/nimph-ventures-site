@@ -2,17 +2,15 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { trackCTAClick } from '../utils/analytics'
 import {
-  EMAIL_CONTACT,
-  EMAIL_NIMPH,
   EMAIL_DRAFSENSE,
+  EMAIL_PROMARK,
   LINKEDIN_URL,
   LINKEDIN_HANDLE,
 } from '../constants'
 
 const emailLinks = [
-  { address: EMAIL_CONTACT, label: EMAIL_CONTACT },
-  { address: EMAIL_NIMPH, label: EMAIL_NIMPH },
   { address: EMAIL_DRAFSENSE, label: EMAIL_DRAFSENSE },
+  { address: EMAIL_PROMARK, label: EMAIL_PROMARK },
 ]
 
 const Footer = () => {
